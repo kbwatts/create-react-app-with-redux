@@ -15,7 +15,7 @@ class App extends Component {
           <h1 className={styles['App-header']}>Welcome to React</h1>
         </header>
         <p className={styles['App-intro']}>
-          {this.props.stats && this.props.stats.total_population.population}
+          {this.props.stats && this.props.stats.overview.descriptions}
         </p>
       </div>
     );

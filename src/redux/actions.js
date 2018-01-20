@@ -2,7 +2,7 @@
 export default {
     fetchWorldPopulation: () => {
         return (dispatch, getState) => {
-            const data = fetch("http://api.population.io:80/1.0/population/World/2018-01-01/").then((request) => request.json()).then(data => {
+            const data = fetch("https://msi.bbycastatic.ca/mobile-si/si/v4/pdp/overview/10381162?lang=en").then((request) => request.json()).then(data => {
                 dispatch({
                     type: 'FETCH_WORLD_POPULATION_SUCCESS',
                     data
