@@ -6,11 +6,11 @@
   /*animation: App-logo-spin infinite 20s linear;*/
   height: 40px;
   align-self: center;
+  padding-right: 16px;
 }
 
 .App-header-container {
   background-color: #003b64;
-  padding: 8px;
   color: white;
   display: flex;
   align-content: center;
@@ -19,7 +19,6 @@
 
 .App-header {
   background-color: #003b64;
-  padding: 8px;
   color: white;
   display: inline-block;
 }
