@@ -9,20 +9,22 @@ class App extends Component {
   render() {
     return (
       <div className={styles['App']}>
-        <header className={styles['App-header']}>
+        <header className={styles['App-header-container']}>
           <img src={logo} className={styles['App-logo']} alt="logo" />
-          <h1 className={styles['App-header']}>In-Store Price Scanner</h1>
+          <h1 className={styles['App-header']}>Price Scanner</h1>
         </header>
-          <p className={styles['App-intro']}>
-            {this.props.stats && this.props.stats.overview.productId}
-          </p>
-          <p className={styles['App-intro']}>
-              {this.props.stats && this.props.stats.overview.names.short}
-          </p>
-          <p className={styles['App-intro']}>
-              ${this.props.stats && this.props.stats.overview.priceBlock.itemPrice.regularPrice}
-          </p>
-          <p>Veuillez-vous référer à un associé(e) pour assistance sur cet article</p>
+          <div className={styles['Main-container']}>
+              <p className={styles['App-intro']}>
+                Code de Produit: {this.props.stats && this.props.stats.overview.productId}
+              </p>
+              <p className={styles['App-intro']}>
+                  Marque: {this.props.stats && this.props.stats.overview.names.short}
+              </p>
+              <p className={styles['App-intro']}>
+                  Price: ${this.props.stats && this.props.stats.overview.priceBlock.itemPrice.regularPrice}
+              </p>
+              <p>Veuillez-vous référer à un associé(e) pour assistance sur cet article</p>
+          </div>
       </div>
     );
   }
