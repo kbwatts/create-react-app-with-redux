@@ -9,20 +9,26 @@ class App extends Component {
   render() {
     return (
       <div className={styles['App']}>
-        <p>Edition</p>
         <header className={styles['App-header']}>
           <img src={logo} className={styles['App-logo']} alt="logo" />
-          <h1 className={styles['App-header']}>Welcome to React</h1>
+          <h1 className={styles['App-header']}>In-Store Price Scanner</h1>
         </header>
-        <p className={styles['App-intro']}>
-          {this.props.stats && this.props.stats.overview.descriptions}
-        </p>
+          <p className={styles['App-intro']}>
+            {this.props.stats && this.props.stats.overview.productId}
+          </p>
+          <p className={styles['App-intro']}>
+              {this.props.stats && this.props.stats.overview.names.short}
+          </p>
+          <p className={styles['App-intro']}>
+              ${this.props.stats && this.props.stats.overview.priceBlock.itemPrice.regularPrice}
+          </p>
+          <p>Veuillez-vous référer à un associé(e) pour assistance sur cet article</p>
       </div>
     );
   }
 
   componentWillMount() {
-    this.props.myAppActions.fetchWorldPopulation();
+    this.props.myAppActions.fetchPDP();
   }
 }
 
